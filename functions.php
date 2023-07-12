@@ -15,15 +15,15 @@ function boilerplate_add_support() {
 function menu_blog(){
   register_nav_menus(
     array(
-      'header-menu' => __('Header'),
-      'extra-menu' => __('Extra-menu')
+      'header-menu' => 'Header',
+      'extra-menu' => 'Extra-menu'
     )
   );
 }
 function themename_custom_logo_setup() {
 	$defaults = array(
-		'height'               => 100,
-		'width'                => 400,
+		'height'               => 50,
+		'width'                => 200,
 		'flex-height'          => true,
 		'flex-width'           => true,
 		'header-text'          => array( 'site-title', 'site-description' ),

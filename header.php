@@ -7,8 +7,38 @@
   </head>
   <body <?php body_class(); ?>>
     <header>
+      <nav>
+        <div class="logo">
+        <?php
+        if ( function_exists( 'the_custom_logo' ) ) {
+          the_custom_logo();
+        }
+        ?>
+        </div>
+        <?php
       
-      <div id="navigation">
+      wp_nav_menu(
+        array(
+          // 'header-menu' => 'theme-menu', 
+          'menu' => 'header',
+          'menu_id' => 'navigation' ,
+          'menu_class' => 'list'
+        )
+      );
+      ?>
+      
+      </nav>
+      <div id="component-newsrails">
+        <h2>teste</h2>
+      </div>
+     
+    </header>
+
+
+
+
+
+     <!-- <div id="navigation">
         <nav>
           <h1 class='logo'>Logo</h1>
           <a href="#">Carreira</a>
@@ -20,5 +50,4 @@
       </div>
       <div id="component-newsrails">
         a
-      </div>
-    </header>
+      </div> -->
